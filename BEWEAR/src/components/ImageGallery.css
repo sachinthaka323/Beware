@@ -1,0 +1,228 @@
+/* ═══════════════════════════════════════════════════════════════════ */
+/* IMAGE GALLERY COMPONENT                                               */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+.ig-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Main Image Wrapper */
+.ig-main-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f5f0ea;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ig-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* No Image State */
+.ig-no-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f0ea;
+  border-radius: 12px;
+  color: #999;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation Buttons */
+.ig-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+  backdrop-filter: blur(2px);
+}
+
+.ig-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.ig-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.ig-nav-prev {
+  left: 12px;
+}
+
+.ig-nav-next {
+  right: 12px;
+}
+
+/* Image Counter */
+.ig-counter {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(2px);
+}
+
+/* Thumbnails Container */
+.ig-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 8px;
+}
+
+/* Thumbnail Button */
+.ig-thumbnail {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #e0dbd3;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+}
+
+.ig-thumbnail:hover {
+  border-color: #b89a6a;
+  transform: scale(1.05);
+}
+
+.ig-thumbnail.active {
+  border-color: #0a0a0a;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #0a0a0a;
+}
+
+.ig-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ═══════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN                                                    */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .ig-thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .ig-main-wrapper {
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .ig-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .ig-nav-prev {
+    left: 8px;
+  }
+
+  .ig-nav-next {
+    right: 8px;
+  }
+
+  .ig-counter {
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+
+  .ig-thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 6px;
+  }
+
+  .ig-thumbnail {
+    border-width: 1.5px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 380px) {
+  .ig-main-wrapper {
+    aspect-ratio: 1 / 1.2;
+  }
+
+  .ig-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .ig-counter {
+    padding: 3px 8px;
+    font-size: 9px;
+  }
+
+  .ig-thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+  }
+}
+
+/* Landscape mode on small screens */
+@media (max-height: 500px) and (max-width: 640px) {
+  .ig-main-wrapper {
+    aspect-ratio: 1.5 / 1;
+  }
+}

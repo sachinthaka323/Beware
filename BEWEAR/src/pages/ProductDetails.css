@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Syncopate:wght@400;700&display=swap');
+
+/* ═══════════════════════════════════════════════════════════════════ */
+/* PRODUCT DETAILS PAGE                                                 */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+.pd-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 40px);
+  background: #faf8f5;
+  min-height: 100vh;
+}
+
+/* Back Button */
+.pd-breadcrumbs-text {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.pd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  background: white;
+  border: 1.5px solid #e0dbd3;
+  border-radius: 50px;
+  color: #0a0a0a;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pd-back-btn:hover {
+  border-color: #0a0a0a;
+  background: #f5f0ea;
+  transform: translateX(-4px);
+}
+
+.pd-back-btn:active {
+  transform: translateX(-2px);
+}
+
+/* Not Found Section */
+.pd-not-found {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 16px;
+}
+
+.pd-not-found h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 300;
+  color: #0a0a0a;
+  margin-bottom: 16px;
+}
+
+.pd-not-found p {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+}
+
+/* Main Content Grid */
+.pd-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 8vw, 64px);
+  background: white;
+  border-radius: 16px;
+  padding: clamp(24px, 6vw, 48px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* Gallery Section */
+.pd-gallery-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Details Section */
+.pd-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Badge */
+.pd-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #0a0a0a;
+  color: #f0d9b0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+/* Title */
+.pd-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 400;
+  color: #0a0a0a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Price Row */
+.pd-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.pd-price-label {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.pd-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 600;
+  color: #b89a6a;
+}
+
+.pd-installments {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pd-installment-logos {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Description */
+.pd-description {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Divider */
+.pd-divider {
+  height: 1px;
+  background: #e0dbd3;
+  margin: 8px 0;
+}
+
+/* Section */
+.pd-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pd-section-label {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0a0a0a;
+}
+
+.pd-required {
+  color: #e74c3c;
+  font-weight: 900;
+}
+
+/* Size Selection Grid */
+.pd-size-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 8px;
+}
+
+.pd-size-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #0a0a0a;
+  border-radius: 50px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pd-size-btn:hover {
+  border-color: #b89a6a;
+  background: #faf8f5;
+}
+
+.pd-size-btn.active {
+  background: #0a0a0a;
+  color: white;
+  border-color: #0a0a0a;
+}
+
+/* Color Selection Grid */
+.pd-color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pd-color-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: white;
+  border: 1px solid #e0dbd3;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  width: auto;
+}
+
+.pd-color-btn:hover {
+  border-color: #0a0a0a;
+}
+
+.pd-color-btn.active {
+  border-color: #0a0a0a;
+  border-width: 2px;
+  padding: 3px;
+  /* subtract 1px to offset border-width increase and avoid layout jumps */
+}
+
+.pd-color-sample {
+  width: 50px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+/* Fallback/hidden class if needed */
+.pd-color-name {
+  display: none;
+}
+
+/* Quantity Control */
+.pd-quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e0dbd3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.pd-qty-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pd-qty-btn:hover {
+  background: #f5f0ea;
+}
+
+.pd-qty-btn:active {
+  background: #e0dbd3;
+}
+
+.pd-qty-input {
+  flex: 1;
+  height: 44px;
+  border: none;
+  border-left: 1px solid #e0dbd3;
+  border-right: 1px solid #e0dbd3;
+  text-align: center;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0a0a0a;
+  background: white;
+}
+
+.pd-qty-input:focus {
+  outline: none;
+  background: #f5f0ea;
+}
+
+/* Remove number input spinner */
+.pd-qty-input::-webkit-outer-spin-button,
+.pd-qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pd-qty-input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Total Price */
+.pd-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f5f0ea;
+  border-radius: 8px;
+  font-family: 'Syncopate', sans-serif;
+}
+
+.pd-total>span:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pd-total-price {
+  font-size: clamp(18px, 4vw, 24px) !important;
+  font-weight: 700;
+  color: #b89a6a;
+}
+
+/* Messages */
+.pd-error-message {
+  padding: 12px 16px;
+  background: #ffe0e0;
+  color: #c41e3a;
+  border-radius: 8px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  animation: shake 0.3s ease;
+}
+
+.pd-success-message {
+  padding: 12px 16px;
+  background: #e0ffe0;
+  color: #2d7a2d;
+  border-radius: 8px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* WhatsApp Button */
+.pd-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+}
+
+.pd-whatsapp-btn:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.4);
+}
+
+.pd-whatsapp-btn:active {
+  transform: translateY(0);
+}
+
+.pd-whatsapp-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.pd-messenger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #0669ff;
+  border-radius: 50px;
+  background: white;
+  color: #0669ff;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+}
+
+.pd-messenger-btn:hover {
+  background: #f2f7ff;
+  transform: translateY(-1px);
+}
+
+.pd-messenger-btn:active {
+  transform: translateY(0);
+}
+
+.pd-size-guide-link {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pd-size-guide-link:hover {
+  color: #0a0a0a;
+  opacity: 0.8;
+}
+
+/* Shipping Container */
+.pd-shipping-container {
+  margin-top: 24px;
+  background: #f7f7f7;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.pd-shipping-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Accordion */
+.pd-accordion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-top: 24px;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ═══════════════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN                                                    */
+/* ═══════════════════════════════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pd-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pd-gallery-section {
+    width: 100%;
+  }
+
+  .pd-details-section {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .pd-container {
+    padding: clamp(12px, 3vw, 20px);
+  }
+
+  .pd-content {
+    padding: clamp(16px, 4vw, 24px);
+    gap: 24px;
+  }
+
+  .pd-back-btn {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .pd-title {
+    font-size: clamp(20px, 5vw, 26px);
+  }
+
+  .pd-price {
+    font-size: clamp(20px, 4vw, 24px);
+  }
+
+  .pd-description {
+    font-size: 12px;
+  }
+
+  .pd-size-grid {
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    gap: 6px;
+  }
+
+  .pd-size-btn {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .pd-color-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 6px;
+  }
+
+  .pd-color-btn {
+    padding: 6px 8px;
+  }
+
+  .pd-color-sample {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pd-color-name {
+    font-size: 10px;
+  }
+
+  .pd-qty-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pd-qty-input {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .pd-whatsapp-btn {
+    min-height: 44px;
+  }
+
+  .pd-info-box {
+    padding: 12px;
+  }
+
+  .pd-info-box p {
+    font-size: 11px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 380px) {
+  .pd-size-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pd-color-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pd-color-btn {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pd-total {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

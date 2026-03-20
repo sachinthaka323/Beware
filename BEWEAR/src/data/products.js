@@ -98,11 +98,11 @@ export const PRODUCTS = [
         hex: "#A8B8C8",
         swatch: "/assets/products/women/meadow_bloom_top/meadow_bloom_top.png",
         images: [
-          "/assets/products/women/meadow_bloom_top/img1.png",
-          "/assets/products/women/meadow_bloom_top/img2.png",
-          "/assets/products/women/meadow_bloom_top/img3.png",
-          "/assets/products/women/meadow_bloom_top/img4.png",
-          "/assets/products/women/meadow_bloom_top/img5.png"
+          "/assets/products/women/meadow_bloom_top/img1.jpg",
+          "/assets/products/women/meadow_bloom_top/img2.jpg",
+          "/assets/products/women/meadow_bloom_top/img3.jpg",
+          "/assets/products/women/meadow_bloom_top/img4.jpg",
+          "/assets/products/women/meadow_bloom_top/img5.jpg"
         ]
       }
     ]
