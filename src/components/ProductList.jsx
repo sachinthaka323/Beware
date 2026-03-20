@@ -273,22 +273,28 @@ const styles = `
   .product-price-wrapper {
     display: flex;
     align-items: baseline;
-    gap: 6px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .product-price-old {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(9px, 1.7vw, 10px);
+    color: #787878;
+    text-decoration: line-through;
+    letter-spacing: 0.02em;
+  }
+
+  .product-price-new {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 4vw, 22px);
+    font-weight: 700;
+    color: #d9302f;
+    letter-spacing: -0.01em;
   }
 
   .product-currency {
-    font-family: 'Syncopate', sans-serif;
-    font-size: clamp(8px, 1.8vw, 9px);
-    letter-spacing: 0.1em;
-    color: #999;
-  }
-
-  .product-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 4vw, 22px);
-    font-weight: 300;
-    color: #555;
-    font-style: italic;
+    display: none;
   }
 
   .product-tag {
@@ -367,8 +373,8 @@ function ProductList({ category, title = "Our Collection", subtitle = "Curated f
                   </Link>
 
                   <div className="product-price-wrapper">
-                    <span className="product-currency">LKR</span>
-                    <span className="product-price">{product.price.toLocaleString()}</span>
+                    <span className="product-price-old">Rs {Number(product.originalPrice ?? Math.round(product.price * 1.27)).toLocaleString()}</span>
+                    <span className="product-price-new">Rs {Number(product.price).toLocaleString()}</span>
                   </div>
 
                   {product.tag && (

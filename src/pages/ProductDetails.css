@@ -129,7 +129,36 @@
 .pd-price-row {
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pd-price-old {
+  font-family: 'Syncopate', sans-serif;
+  font-size: clamp(14px, 2.3vw, 16px);
+  color: #777;
+  text-decoration: line-through;
+  letter-spacing: 0.02em;
+}
+
+.pd-price-new {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 700;
+  color: #d9302f;
+  letter-spacing: -0.01em;
+}
+
+.pd-price-savings {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1f6f38;
+  background: #e6f5eb;
+  border-radius: 999px;
+  padding: 3px 10px;
+  text-transform: uppercase;
 }
 
 .pd-price-label {

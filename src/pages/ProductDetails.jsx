@@ -247,6 +247,8 @@ function ProductDetails() {
   const { id, color: colorParam } = useParams();
   const navigate = useNavigate();
   const product = getProductById(id);
+  const originalPrice = product?.originalPrice ?? Math.round(product?.price * 1.3 || 2590);
+  const discountedPrice = product?.price ?? 1295;
 
   const initialColor = product
     ? product.colors.find(c => c.key === colorParam) || product.colors[0]
@@ -342,8 +344,10 @@ function ProductDetails() {
 
           {product.badge && <div className="pd-badge">{product.badge}</div>}
 
-          <div className="pd-price-area" style={{ marginTop: "12px", marginBottom: "8px" }}>
-            <span className="pd-new-price">LKR {Number(product.price).toLocaleString()}</span>
+          <div className="pd-price-row" style={{ marginTop: "12px", marginBottom: "8px" }}>
+            <span className="pd-price-old">Rs {Number(originalPrice).toLocaleString()}</span>
+            <span className="pd-price-new">Rs {Number(discountedPrice).toLocaleString()}</span>
+            <span className="pd-price-savings">Save {Math.round((originalPrice - discountedPrice) / originalPrice * 100)}%</span>
           </div>
 
           <div className="pd-divider" style={{ margin: "24px 0" }} />

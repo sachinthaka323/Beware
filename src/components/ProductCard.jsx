@@ -266,26 +266,25 @@ const styles = `
 
   .card-price-row {
     display: flex;
-    align-items: center;
-    gap: 6px;
+    align-items: baseline;
+    gap: 8px;
     margin-top: 5px;
+    flex-wrap: wrap;
   }
 
-  .card-price-currency {
+  .card-price-old {
     font-family: 'Syncopate', sans-serif;
-    font-size: clamp(8px, 1.8vw, 9px);
-    letter-spacing: 0.1em;
-    color: #999;
-    align-self: flex-end;
-    margin-bottom: 2px;
+    font-size: clamp(10px, 2vw, 12px);
+    color: #777;
+    text-decoration: line-through;
   }
 
-  .card-price {
+  .card-price-new {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 4vw, 18px);
-    font-weight: 300;
-    color: #555;
-    font-style: italic;
+    font-size: clamp(18px, 3.5vw, 20px);
+    font-weight: 700;
+    color: #d9302f;
+    letter-spacing: -0.01em;
   }
 
   .card-divider {
@@ -599,8 +598,11 @@ function ProductCard({ product, id, name, price, badge = "New Arrival", tag = ""
     showToast(added ? `${name} added to favourites` : `${name} removed`, added);
   }, [name, price, image, tag, badge]);
 
+  const originalAmount = Number(product?.originalPrice ?? Math.round(Number(price) * 1.25));
+  const discountedAmount = Number(price || 1295);
+
   const handleWhatsApp = () => {
-    const msg = `Hello BEWEAR 👋\n\nI'm interested in:\n\n🛍 Product: ${name}\n💰 Price: LKR ${price}\n📏 Size: ${size}\n🔢 Quantity: ${quantity}\n\nPlease confirm availability. Thank you!`;
+    const msg = `Hello BEWEAR 👋\n\nI'm interested in:\n\n🛍 Product: ${name}\n💰 Price: LKR ${discountedAmount}\n📏 Size: ${size}\n🔢 Quantity: ${quantity}\n\nPlease confirm availability. Thank you!`;
     window.open(`https://wa.me/94703722496?text=${encodeURIComponent(msg)}`, "_blank");
     setPulsing(true);
     setTimeout(() => setPulsing(false), 700);
@@ -640,11 +642,8 @@ function ProductCard({ product, id, name, price, badge = "New Arrival", tag = ""
         <div className="card-body">
           <div className="card-name">{name}</div>
           <div className="card-price-row">
-            <span className="card-price-currency">LKR</span>
-            <span className="card-price">{Number(price).toLocaleString()}</span>
-          </div>
-
-          <div className="card-divider" />
+            <span className="card-price-old">Rs {originalAmount.toLocaleString()}</span>
+            <span className="card-price-new">Rs {discountedAmount.toLocaleString()}</span>
 
           <div className="card-label">Select Size</div>
           <div className="size-grid">
