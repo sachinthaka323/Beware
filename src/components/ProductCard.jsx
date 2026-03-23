@@ -644,6 +644,9 @@ function ProductCard({ product, id, name, price, badge = "New Arrival", tag = ""
           <div className="card-price-row">
             <span className="card-price-old">Rs {originalAmount.toLocaleString()}</span>
             <span className="card-price-new">Rs {discountedAmount.toLocaleString()}</span>
+          </div>
+
+          <div className="card-divider" />
 
           <div className="card-label">Select Size</div>
           <div className="size-grid">

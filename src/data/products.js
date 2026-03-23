@@ -20,6 +20,52 @@ export const PRODUCTS = [
     sizeGuide:"/sizeguide.png",
     name: "Acid Burst Bleach Tie-Dye Tank Top",
     price: 1500,
+    originalPrice: 2590,
+    badge: "Featured",
+    category: "men",
+    details:`<div class="product-description">
+  <h2>Bewear Bleach Tie-Dye Tank Top</h2>
+
+  <p>
+    Elevate your streetwear rotation with this <strong>Bewear Bleach Tie-Dye Tank Top</strong>. 
+    Each piece features a unique, high-contrast <em>"acid wash"</em> effect where organic 
+    cream-colored bursts stand out against a deep black base.
+  </p>
+
+  <p>
+    Inspired by <strong>90s grunge aesthetics</strong> and blended with modern urban fashion, 
+    this tank top offers a bold and stylish look perfect for casual wear, festivals, 
+    or everyday street style.
+  </p>
+
+  <ul>
+    <li><strong>Brand:</strong> Bewear</li>
+    <li><strong>Style:</strong> Bleach Tie-Dye / Acid Wash</li>
+    <li><strong>Color:</strong> Black with Cream Bleach Pattern</li>
+    <li><strong>Available Size:</strong> L</li>
+    <li><strong>Fit:</strong> Comfortable and breathable tank style</li>
+  </ul>
+</div>`,
+    sizes: [ "L"],
+    colors: [
+      {
+        name: "Default",
+        key: "default",
+        hex: "#1a1a1a",
+        swatch: "/assets/products/men/img.png",
+        images: [
+          "/assets/products/men/img.png"
+          
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    sizeGuide:"/sizeguide.png",
+    name: "vertical striped shirt",
+    price: 1500,
+    originalPrice: 2590,
     badge: "Featured",
     category: "men",
     details:`<div class="product-description">
@@ -66,6 +112,7 @@ export const PRODUCTS = [
     sizeGuide:"/sizeguide.png",
     name: "The Meadow Bloom Top",
     price: 2450,
+    originalPrice: 3200,
     badge: "Trending",
     category: "women",
     details:`<div class="product-description">
@@ -112,6 +159,7 @@ export const PRODUCTS = [
     sizeGuide:"/sizeguide.png",
     name: "Floral Watercolor Tunic",
     price: 3000,
+    originalPrice: 3900,
     badge: "Trending",
     category: "women",
     details:`<div class="product-description">
