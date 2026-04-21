@@ -64,42 +64,75 @@ export const PRODUCTS = [
     id: 2,
     sizeGuide:"/sizeguide.png",
     name: "vertical striped shirt",
-    price: 1500,
-    originalPrice: 2590,
+    price: 3300,
+    originalPrice: 4100,
     badge: "Featured",
     category: "men",
     details:`<div class="product-description">
-  <h2>Bewear Bleach Tie-Dye Tank Top</h2>
-
+    <h2>Bewear vertical striped shirt</h2>
   <p>
-    Elevate your streetwear rotation with this <strong>Bewear Bleach Tie-Dye Tank Top</strong>. 
-    Each piece features a unique, high-contrast <em>"acid wash"</em> effect where organic 
-    cream-colored bursts stand out against a deep black base.
+    High-quality cotton-blend textured knit for a soft, breathable, and structured feel. 
+    Classic vertical double-stripe pattern that elongates the silhouette. 
+    Casual camp collar for an open, airy neckline. 
+    Regular/Relaxed fit with a straight hem, designed to be worn untucked.
   </p>
 
-  <p>
-    Inspired by <strong>90s grunge aesthetics</strong> and blended with modern urban fashion, 
-    this tank top offers a bold and stylish look perfect for casual wear, festivals, 
-    or everyday street style.
-  </p>
-
+  <h4>Colours</h4>
   <ul>
-    <li><strong>Brand:</strong> Bewear</li>
-    <li><strong>Style:</strong> Bleach Tie-Dye / Acid Wash</li>
-    <li><strong>Color:</strong> Black with Cream Bleach Pattern</li>
-    <li><strong>Available Size:</strong> L</li>
-    <li><strong>Fit:</strong> Comfortable and breathable tank style</li>
+    <li>Navy Blue</li>
+    <li>Black</li>
   </ul>
+
+ 
 </div>`,
-    sizes: [ "L"],
+    sizes: [  "M", "L" ],
     colors: [
       {
-        name: "Default",
-        key: "default",
+        name: "Navy Blue and Black",
+        key: "Navy Blue and Black",
         hex: "#1a1a1a",
-        swatch: "/assets/products/men/img.png",
+        swatch: "/assets/products/men/vertical_striped_shirt.png",
         images: [
-          "/assets/products/men/img.png"
+          "/assets/products/men/vertical striped shirt/img1.png",
+          "/assets/products/men/vertical striped shirt/img2.png",
+          "/assets/products/men/vertical striped shirt/img3.png",
+          "/assets/products/men/vertical striped shirt/img4.png"
+          
+        ]
+      }
+    ]
+  },
+   {
+    id:3,
+    sizeGuide:"/sizeguide.png",
+    name: "Acid wash T shirt",
+    price: 2200,
+    originalPrice: 2900,
+    badge: "Featured",
+    category: "men",
+    details:`<div class="product-description">
+    <h2>Bewear Acid wash T shirt</h2>
+    <h4>Material</h4>
+  <p>60% Cotton, 40% Polyester</p>
+
+  <p>
+    Elevate your everyday wardrobe with this heavyweight cotton t-shirt, 
+    featuring a unique mineral wash finish. The specialized acid-wash 
+    treatment creates a one-of-a-kind textured appearance with subtle 
+    tonal variations, ensuring no two pieces are exactly alike. 
+    Designed with a classic crew neck.
+  </p>
+ 
+</div>`,
+    sizes: [  "M", "L" ],
+    colors: [
+      {
+        name: "Brown and Black",
+        key: "Brown and Black",
+        hex: "#1a1a1a",
+        swatch: "/assets/products/men/Acid wash T shirt/img.png",
+        images: [
+          "/assets/products/men/Acid wash T shirt/img1.png",
           
         ]
       }
@@ -222,10 +255,7 @@ export const PRODUCTS = [
         hex: "#A8B8C8",
         swatch: "/assets/products/women/floral_watercolor_tunic/img1.png",
         images: [
-          "/assets/products/women/floral_watercolor_tunic/img1.png",
-          "/assets/products/women/floral_watercolor_tunic/img2.png",
-          "/assets/products/women/floral_watercolor_tunic/img3.png",
-          "/assets/products/women/floral_watercolor_tunic/img4.png"
+          "/assets/products/women/floral_watercolor_tunic/img1.png"
         ]
       }
     ]
